@@ -3,6 +3,7 @@ import {
   RecoilRoot,
   atom,
   useRecoilState,
+  useRecoilValue,
 } from "recoil";
 import "./App.css";
 
@@ -26,7 +27,7 @@ function Counter() {
 }
 
 function Display() {
-  const [number] = useRecoilState(numState);
+  const number = useRecoilValue(numState);
   return <div>{number}</div>;
 }
 
